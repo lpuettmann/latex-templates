@@ -1,1 +1,1 @@
-My Latex templates for papers and presentations.
+My Latex templates for papers and presentations. More information [here](http://lpuettmann.github.io/2016/04/23/reasonable-latex-templates/).
