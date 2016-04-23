@@ -1,0 +1,221 @@
+\documentclass[13pt]{beamer}
+%\documentclass[14pt, handout]{beamer} % to print out, change to this set-up
+
+\usepackage{amsmath} % to include math
+\usepackage{tikz}
+\usetikzlibrary{arrows} % to use arrows in tikz
+
+\usepackage{pgfplots}
+\usepackage{units}
+\usepackage{ulem}
+\usepackage{epstopdf} % for making .eps to .pdf
+\usepackage{graphicx} % to include graphics
+\usepackage{subfigure}
+\usepackage{hyperref}
+\usepackage{appendixnumberbeamer} 
+\usepackage{bbm}
+\usepackage[utf8]{inputenc} % this makes it possible to use e
+
+\usepackage{setspace} % to use \setstretch later
+
+
+\usepackage[australian]{babel} % change date to to European date format
+\usetheme{Dresden}
+\setbeamercovered{transparent} % sets "\pause" to grey color
+
+%%% The following section removes the second lighter blue line below the navigation panel %%%
+\makeatletter
+\beamer@theme@subsectionfalse
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setbeamertemplate{frametitle}[default][center]
+
+%%% I added the following two lines together to edit the color of the navigation bar at the top
+\setbeamercolor{section in head/foot}{fg=gray,bg=white} 
+%\setbeamertemplate{section in head/foot shaded}[default][10] % I'm not sure what this does
+
+
+\newcommand\MyLBrace[2]{\left.\rule{0pt}{#1}\right\}\text{#2}} % use curly brackets in tabular
+
+
+\hypersetup{pdfpagemode=UseNone} % un-comment this if you don't want to show bookmarks open when opening the pdf
+
+\usepackage{longtable} % for nice tables
+%\usepackage{booktabs} % for nice tables
+%\usepackage{tabularx} % for nice tables
+
+\usepackage{caption,fixltx2e}  % for nice tables
+\usepackage[flushleft]{threeparttable}  % for nice tables
+
+\newcommand*{\myalign}[2]{\multicolumn{1}{#1}{#2}} % define new command so that we can change alignment by hand in rows
+
+%%%%%%%%%%%%%%%% Use the following 8 lines together to make new thick line for table (work around because other stuff didn't work anymore
+\usepackage{array}
+\makeatletter  % make line thicker for the table
+\newcommand{\thickhline}{%
+    \noalign {\ifnum 0=`}\fi \hrule height 1pt
+    \futurelet \reserved@a \@xhline
+}
+\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 1pt\hskip\tabcolsep}}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% for boxes around text
+\usepackage{tcolorbox}
+\usepackage{lipsum}
+
+%%%%%%%%%% Uncomment the following two lines to use Helvetica as font %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\renewcommand{\familydefault}{\sfdefault} % to use sans-serif font
+%\usepackage[scaled=.90]{helvet} % use Helvetica font
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+% -------- Define new color ------------------------------
+\usepackage{color}  
+\definecolor{mygrey}{rgb}{0.85,0.85,0.85} % make grey for the table
+\definecolor{MatlabCellColour}{RGB}{252,251,220}
+\definecolor{MatlabPurple}{RGB}{160, 32, 240}
+\definecolor{light-gray}{gray}{0.75}
+% --------------------------------------------------------
+
+% -------- Use the following two lines for making lines grey in tables -------------------
+\usepackage{color, colortbl}
+\usepackage{multirow}
+% ----------------------------------------------------------------------------------------
+
+\usepackage[absolute, overlay]{textpos} % use to put beamer buttons on the very bottom 
+
+\renewcommand*\footnoterule{} % get rid of line separating the footnote
+
+
+% -------- Use the following to include code snippets -------------------
+\usepackage{listings}
+\lstdefinestyle{customc}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  %frame=L,
+  xleftmargin=\parindent,
+  language=Matlab,
+  showstringspaces=false,
+  basicstyle=\footnotesize\ttfamily,
+  keywordstyle=\bfseries\color{black},
+  commentstyle=\itshape\color{purple!40!black},
+  identifierstyle=\color{black},
+  stringstyle=\color{MatlabPurple},
+  backgroundcolor=\color{MatlabCellColour}
+ }
+% ----------------------------------------------------------------------------------------
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\useinnertheme{square} % changes the appearance of bullet points for both numbers and circles
+\setbeamertemplate{items}[circle] % write circle or square
+
+\setbeamerfont{page number in head/foot}{size={\scriptsize}} % set size of page numbers
+
+\setbeamertemplate{footline}[frame number]{} % shows the page numbers
+\setbeamertemplate{navigation symbols}{} % this turns off the annoying navigation symbols at the bottom of the page
+
+%\definecolor{beamer@blendedblue}{rgb}{0.0471,0.298,0.6824} % dark-blue
+\definecolor{beamer@blendedblue}{rgb}{0.0192,0.510,0.741} % light-blue
+\setbeamercolor{button}{bg=light-gray, fg=white}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title {Title }
+% \vspace{-0.5cm}
+\author{Firstname Lastname\\[0.3cm]  
+\textit{Occasion} }
+\date{\today}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+\section{Section1}
+\setcounter{subsection}{1} % add this after each \section{...} to start a new section of navigation circles
+
+\begin{frame}[label=title1]\frametitle{Title}
+	\begin{textblock*}{3cm}(10.3cm,9.23cm)
+		\hyperlink{appendix1}{\beamergotobutton{more}}
+	\end{textblock*}
+\begin{itemize}		
+	\item \textit{Question answered by paper:}\\[0.1cm]
+	 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus purus, tincidunt in enim et, pretium tempus enim. Morbi ornare scelerisque diam, eu elementum nisl gravida a.\pause\item \textit{Relevance:} \\[0.1cm]
+	Maecenas congue lacus at massa sollicitudin, vel pretium magna sollicitudin. Quisque tincidunt mauris gravida eros pulvinar, eu placerat risus efficitur.
+\end{itemize}
+\end{frame}
+
+
+\section{Section2}
+\setcounter{subsection}{1} % add this after each \section{...} to start a new section of navigation circles
+
+\begin{frame}[label=title2]\frametitle{Title}
+%\vspace{-0.5cm}
+\begin{enumerate}
+	\item 
+	\pause\item 
+	\pause\item 
+\end{enumerate}		
+\end{frame}
+
+
+\section{Section3}
+\setcounter{subsection}{1} % add this after each \section{...} to start a new section of navigation circles
+
+\begin{frame}[label=identification]\frametitle{Identification}
+%\vspace{-0.5cm}
+\begin{itemize}		
+	\item 
+	\begin{itemize}
+		\item		
+		\item 
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[label=title3]\frametitle{Title}
+\begin{itemize}
+\item 
+\begin{enumerate}		
+	\item 	\pause\item 
+	\pause\item \end{enumerate}
+\pause\item 
+	\begin{itemize}
+	\item 
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\appendix 
+
+{ % this makes a black page
+\setbeamercolor{background canvas}{bg=black}
+\frame[plain]{}
+} 
+\addtocounter{framenumber}{-1}
+
+
+
+\begin{frame}[plain, label=appendix1]\frametitle{Title}
+    \begin{textblock*}{3cm}(10.3cm,9.23cm)
+		\hyperlink{title1}{\beamergotobutton{back}}
+	\end{textblock*}
+\begin{itemize}
+	\item 
+\end{itemize}
+\end{frame}
+
+
+\end{document}
