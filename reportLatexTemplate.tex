@@ -1,0 +1,101 @@
+\documentclass[a4paper,justified]{tufte-handout}
+
+\usepackage[utf8]{inputenc} % include umlaute
+
+\usepackage{graphicx,hyperref,amsmath,natbib,bm,url}
+
+\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+
+
+\title[Short Title]{\textbf{\textnormal{My full title\\[0.1cm] continued here}}}
+\author{Firstname Surname}
+
+
+\hypersetup{
+colorlinks=true,
+hypertexnames=false,
+colorlinks,   
+linkcolor={black},
+citecolor={black},
+urlcolor={black},
+pdfstartview={FitV},
+unicode,
+breaklinks=true
+} 
+
+\usepackage{mdframed}
+\usepackage{microtype,todonotes}
+\usepackage[australian]{babel} % change date to to European format
+
+\hypersetup{pdfpagemode=UseNone} % un-comment this if you don't want to show bookmarks open when opening the pdf
+
+
+\begin{document}
+
+\makeatletter
+% Paragraph indentation and separation for normal text
+\renewcommand{\@tufte@reset@par}{%
+  \setlength{\RaggedRightParindent}{1.0pc}%
+  \setlength{\JustifyingParindent}{1.0pc}%
+  \setlength{\parindent}{0pc}%
+  \setlength{\parskip}{1.6ex}%
+}
+\@tufte@reset@par
+
+% Paragraph indentation and separation for marginal text
+\renewcommand{\@tufte@margin@par}{%
+  \setlength{\RaggedRightParindent}{0.5pc}%
+  \setlength{\JustifyingParindent}{0.5pc}%
+  \setlength{\parindent}{0pc}%
+  \setlength{\parskip}{1.2ex}%
+}
+\makeatother
+
+
+
+\maketitle
+
+\bigskip
+
+
+\vspace{-0.3cm}
+\begin{abstract} \noindent
+\textbf{Abstract.} Nulla feugiat mi vitae lectus pellentesque faucibus. Quisque elit enim, varius non ligula vel, semper finibus massa. Phasellus dui dui, porttitor sed vehicula ullamcorper, sollicitudin non velit. Proin sagittis orci quis fringilla ultrices. Sed ac est porta, auctor lacus ac, viverra dui. Suspendisse aliquet accumsan nulla, non aliquet felis bibendum vel. Donec tristique tincidunt arcu, in aliquet erat. Curabitur viverra porttitor finibus. Donec et est molestie, tristique velit eget, fringilla nunc. Fusce at vestibulum ligula. Praesent velit velit, rutrum sed orci eu, suscipit facilisis ante. Proin tempor odio ac urna laoreet dapibus non id justo. Curabitur vitae pretium leo. Nulla vel eros sit amet sem gravida posuere vel nec lectus. Nullam orci ligula, luctus sit amet risus eget, tristique sodales arcu.
+\end{abstract}\vspace{-0.3cm}
+
+\bigskip
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique elementum dictum. Morbi imperdiet nec libero ut congue. In eget quam fermentum, lacinia est at, maximus eros. Nam vehicula suscipit orci vitae consequat. Curabitur feugiat augue mauris, vel sollicitudin libero fermentum eu. Vestibulum nec finibus justo, sit amet elementum lorem. Morbi suscipit, ligula dapibus condimentum elementum, elit ex sollicitudin enim, nec efficitur nunc sem sit amet nunc.
+
+\begin{figure*}
+  \includegraphics[trim=0cm 0cm 0cm 0cm, clip=true]{./figures/pe_ratio.pdf}
+  \caption[Short version of title that appears in the list of figures]{\textit{Source:} Robert J. Shiller (2015), www.irrationalexuberance.com}}
+\end{figure*} 
+
+Phasellus vehicula justo sit amet velit gravida consequat. Vivamus vel pretium mauris. Ut auctor vitae risus rhoncus blandit. Etiam convallis ornare metus, a scelerisque arcu tincidunt id. Vestibulum a leo eget purus interdum lobortis. Sed maximus ipsum sit amet ipsum cursus, sed dapibus nibh blandit. Phasellus ornare enim at dolor semper aliquet.\footnote{Bertrand Russell (1932). ``In Praise of Idleness''.}
+
+\begin{quotation} \noindent
+``Modern methods of production have given us the possibility of ease and security for all; we have chosen, instead, to have overwork for some and starvation for others. Hitherto we have continued to be as energetic as we were before there were machines; in this we have been foolish, but there is no reason to go on being foolish forever.''
+\end{quotation}\vspace{-0.3cm}
+
+In a pharetra nulla. Curabitur pretium sem eget tincidunt sagittis. Curabitur sem lacus, viverra vel aliquet ac, accumsan id leo. Donec viverra id ante eget elementum. Nam in augue ligula. Suspendisse luctus felis est, ut fermentum dolor bibendum a. Maecenas viverra metus in felis elementum, ac ornare lacus consectetur. Aenean non lectus id dui mollis finibus. Ut et hendrerit nisl. Vestibulum ultrices metus quis nibh accumsan, sed finibus turpis egestas. Donec consectetur tempus lobortis. Suspendisse at convallis leo. Suspendisse ac sapien in lacus malesuada egestas nec consectetur lacus. In hac habitasse platea dictumst. Nulla facilisi.
+
+
+
+Vestibulum quis lorem augue. Suspendisse ultricies, risus at lobortis aliquam, risus sapien dictum sapien, non fringilla odio erat in erat. Ut condimentum interdum sem, sit amet hendrerit nisi molestie eget. Duis vulputate sed orci non pharetra. Donec tincidunt neque ut lorem gravida, at gravida quam venenatis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas ut ipsum quis nulla finibus convallis quis vel lorem. Fusce in feugiat augue, eget vulputate ante. Sed eleifend, massa et dictum congue, dui urna tristique tellus, sed pellentesque metus turpis ac sapien. Aliquam nisi quam, tincidunt id mi ut, elementum pharetra lectus. Integer tempor diam a molestie porta. Proin imperdiet nec mi lacinia dapibus. Nulla ex tortor, volutpat non semper non, lobortis et diam. Quisque euismod sapien ac augue varius tempus. Donec ullamcorper ornare ipsum in porttitor.
+
+\begin{marginfigure}
+  \includegraphics[trim=0cm 0cm 0cm 0cm, clip=true]{./figures/cat.jpg}
+  \caption[Short version of title that appears in the list of figures]{This and that}
+\end{marginfigure} 
+
+Nulla vel elit eu turpis blandit maximus lacinia quis mauris. Integer molestie pellentesque eleifend. Praesent nec finibus velit. Morbi et sem lorem. Etiam lacinia, sem eu feugiat finibus, turpis tellus interdum ipsum, ut dignissim erat erat quis magna. Nunc magna quam, pharetra sit amet diam a, iaculis sollicitudin neque. Ut dignissim ornare felis sed commodo. Aenean eget massa quis neque faucibus efficitur non ac enim. Nulla tempus tristique tellus. Morbi at tempus libero. Nam porttitor augue eget quam mattis, sit amet imperdiet risus finibus.
+ 
+
+\vspace{1cm}
+--------------------------\\
+\textit{We thank X1, X2 and X3.}
+
+
+
+\end{document}
