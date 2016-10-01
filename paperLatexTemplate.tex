@@ -25,7 +25,7 @@ breaklinks=true
 
 \usepackage{microtype,todonotes}
 \usepackage[australian]{babel} % change date to to European format
-\usepackage[a4paper,text={16.5cm,25.2cm},centering]{geometry} % Change page size
+\usepackage[a4paper,text={14.5cm, 25.2cm},centering]{geometry} % Change page size
 \setlength{\parskip}{1.2ex} % show new paragraphs with a space between lines
 \setlength{\parindent}{0em} % get rid of indentation for new paragraph
 \clubpenalty = 10000 % prevent "orphans" 
@@ -78,6 +78,18 @@ breaklinks=true
   \endgroup
 }
 
+% -------- Customize page numbering ----------------------------
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+ \pagestyle{fancy}
+\fancyhf{} % get rid of header and footer
+ \cfoot{ \footnotesize{ \thepage } }
+
+\rhead{\small{\textit{Firstname Surname}}}
+\lhead{\small{\textit{PaperTitle}}}
+\renewcommand{\headrulewidth}{0pt} % turn off header line
+% --------------------------------------------------------------
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -88,13 +100,13 @@ breaklinks=true
 \thispagestyle{empty} % page number not shown on first page
 
 \begin{center}
-{\LARGE [Title]}\\[0.4cm]
+{\LARGE PaperTitle}\\[0.4cm]
  {\large Firstname Surname}\\[0.2cm]
   {\large \href{mailto:firstname.surname@uni-bonn.de}{firstname.surname@uni-bonn.de}}\\[0.2cm]
  {\large \today}\\
 \end{center}
 
-\blfootnote{\textsl{\textbullet \phantom{a} We wish to thank X1, X2 and X3.}}
+\blfootnote{\textit{\textbullet \phantom{a} We wish to thank X1, X2 and X3.}}
 
 \vspace*{-0.1cm}
 \begin{center}
@@ -122,14 +134,13 @@ Suspendisse posuere lectus vitae libero tincidunt dignissim. Nulla in purus posu
 
 Nulla luctus mauris id interdum accumsan. Praesent consequat eros quam, ac tempus risus mollis eget. In at sem vel dolor venenatis tempor sed quis felis. Vestibulum facilisis commodo felis id iaculis. Suspendisse potenti. Aliquam tellus dui, auctor eu nunc nec, ultrices fringilla justo. Nunc commodo lectus sed eros scelerisque auctor. Sed porta fringilla ultricies. Vivamus pharetra, libero ac eleifend pharetra, massa massa tincidunt sem, non tincidunt ipsum elit at neque. Integer mattis ligula ac dignissim euismod. Suspendisse bibendum elementum arcu, et facilisis ipsum elementum eu. Mauris at nisi in quam rutrum venenatis. Pellentesque in turpis vel tellus pellentesque malesuada at eget arcu. Maecenas vitae nibh ipsum.
 
-
 \begin{figure}
 \caption{Cyclically adjusted monthly price earnings ratio}
 	\centering
 	\includegraphics[trim=0cm 0cm 0cm 0cm, clip=true, totalheight=0.3\textheight]{figures/pe_ratio}
 	\floatfoot{
 	\begin{minipage}{0.65\textwidth}
-	\textit{Source:} Robert J. Shiller (2015), {\href{www.irrationalexuberance.com}{\texttt{Irrational Exuberance}}}
+	\textit{Source:} \cite{S2000}, {\href{www.irrationalexuberance.com}{\texttt{Irrational Exuberance}}}
 	\end{minipage}
 	}
 	\label{fig:shiller_pe}

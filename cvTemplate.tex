@@ -1,0 +1,147 @@
+% http://www.stat.berkeley.edu/~paciorek/computingTips/Latex_template_creating_CV_.html
+
+\let\nofiles\relax % necessary to customize footer
+\documentclass[margin, centered]{res} % choose line or centered
+
+\usepackage{hyperref} % to link the email address
+\hypersetup{
+colorlinks=true,
+hypertexnames=false,
+colorlinks,		
+linkcolor={black},
+citecolor={black},
+urlcolor={black},
+pdfstartview={FitV},
+unicode,
+breaklinks=true
+} 
+
+\usepackage{datetime} % I use this to automate the display of month, year 
+
+\usepackage[australian]{babel} % change date to to European format
+\usepackage[utf8]{inputenc} % include umlaute
+
+\itemsep=0in
+\parsep=0in
+
+\newenvironment{list1}{
+  \begin{list}{\ding{113}}{%
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in} 
+      \setlength{\leftmargin}{0.17in}}}{\end{list}}
+\newenvironment{list2}{
+  \begin{list}{$\bullet$}{%
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in} 
+      \setlength{\leftmargin}{0.2in}}}{\end{list}}
+
+
+%%% Customize header and footer %%%%%
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\pagestyle{fancy} % turn page numbers on
+\fancyhf{} % turn centered page number off
+ \renewcommand{\headrulewidth}{0pt} % turn horizontal line at top off
+\rfoot{\thepage \hspace{1pt}/\pageref{LastPage}} % Customize page numbering
+
+
+\begin{document}
+\vspace*{0.5cm}
+\name{{\LARGE Firstname Lastname} \vspace*{.1in}}
+
+
+\begin{resume}
+\section{}	
+\vspace{.05in} 
+\begin{tabular}{@{}p{2.1in}p{4in}}
+\textit{street number} 			& \href{mailto:hello@example.com}{\textit{hello@example.com}}\\           
+\textit{ZipCode City, Country}  				& \textit{123456789}\\
+\end{tabular}
+
+
+\section{\sc Research \\ interests} area1, area2, area3
+
+
+\section{\sc Education}
+{\bf UniversityName}\\
+\vspace*{-.1in}
+\begin{list2}
+\item Ph.D. student in economics \hfill {Since 1954} 
+\item Supervisor
+\end{list2}
+
+{\bf UniversityName}\\
+\vspace*{-.1in}
+\begin{list2}
+\item M.Sc. Economics \hfill {1951 - 1953}
+\item Courses in course1, course2 and course3.
+\item Dissertation: "Name"
+\end{list2}
+
+{\bf UniversityName}\\
+\vspace*{-.1in}
+\begin{list2}
+\item B.A. Economics \hfill {1948 - 1951}
+\end{list2}
+
+
+\section{\sc Research \\ projects}
+\begin{list2}
+\item Project1\\[-0.3cm]
+\item Project2, with CoAuthor1 \\[-0.3cm]
+\item Project3\\[-0.3cm]
+\item Project4
+\end{list2}
+
+
+
+\section{\sc Teaching}
+
+{\em JobTitle}\\[-0.1cm]
+\begin{list2}
+\item course1 \hfill {01/1950  -  06/1950}\\[-0.25cm]
+\item course2 \hfill {08/1951  -  02/1952}\\[-0.25cm]
+\end{list2}
+
+
+\section{\sc Experience}
+{\bf CompanyName1}, City, Country
+
+\vspace{-.3cm}
+{\em JobTitle} \hfill {03/1953 - 07/1953}\\
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas dapibus enim, in hendrerit libero scelerisque et. Nunc fringilla eleifend elit a vulputate. 
+
+{\bf CompanyName2}, City, Country
+
+\vspace{-.3cm}
+{\em JobTitle} \hfill {06/1956 - 09/1956}\\
+
+\section{\sc Conference presentations}
+
+{\bf ConferenceName1}, City, Country \hfill {3/1957}
+
+{\bf ConferenceName2}, City, Country \hfill {12/1952}
+
+\section{\sc Grants} 
+\begin{list2}
+\item Grant1 by Institution1 \hfill 1/1955-12/1956
+\item  Grant2 by Institution2 \hfill 1/1954-12/1955
+\item  Award1 by Institution3 \hfill 1949
+\end{list2}
+
+
+\section{\sc Computing} 
+ProgrammingLanguage1, ProgrammingLanguage2
+
+
+\section{\sc Languages} 
+Language1, Language1, Language3
+
+\end{resume}
+
+\vspace{0.05cm}
+\hfill   {\footnotesize (Updated: \monthname} {\footnotesize \the\year)}
+
+\end{document}
